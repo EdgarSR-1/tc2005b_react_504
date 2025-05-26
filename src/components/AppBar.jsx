@@ -55,7 +55,7 @@ function ResponsiveAppBar({ logout }) {
 
   const handleCloseUserMenu = (e) => {
     setAnchorElUser(null);
-    console.log(e.target.textContext);
+    console.log(e.target.textContent);
     if (e.target.textContent === pages[0]) {
       navigate("/");
     }
@@ -71,7 +71,7 @@ function ResponsiveAppBar({ logout }) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
